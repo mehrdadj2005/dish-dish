@@ -1,0 +1,31 @@
+#jon {
+    border: 1px solid red;
+    padding: 5px;
+    font-size: 34px;
+}
+
+#sorat {
+    background-color: rgb(168, 101, 231);
+    border: none;
+    outline: none;
+    font-size: 34px;
+    padding: 5px;
+}
+
+#ball {
+    width: 75px;
+    height: 75px;
+    background-color: aquamarine;
+    border-radius: 50px;
+    /* margin-top: 10px; */
+    transition-duration: 2s;
+    position: absolute;
+}
+
+#contaner{
+    width: 80%;
+    height: 450px;
+    margin: 100px auto;
+    background-color: rgb(247, 131, 131);
+    position: relative;
+}
