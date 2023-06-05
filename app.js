@@ -1,11 +1,19 @@
 // بادی رو سلکت کردم
 let body = document.querySelector('body')
+// فضایی که توپ میتواند جابجا شود
+let contaner = document.querySelector('#contaner')
 // توپ رو سلکت کردم
 let ball = document.querySelector('#ball')
 // اسپن جون رو سلکت کردم
 let jon = document.querySelector('#jon')
 // اینپوت جون رو سلکت کردم
 let sorat = document.querySelector('#sorat')
+// دیو ارور رو سلکت کردم
+let error = document.querySelector('#error')
+// اسپن ارور
+let exit = document.querySelector('#exit')
+// بمب انجار در صفحه
+let bomb = document.querySelector('#bomb')
 
 
 // /\/\/\/\/\/\/\/\/\/\/\/\/\ جابجا کردن توپ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
@@ -100,4 +108,34 @@ sorat.addEventListener('click', () => {
 ball.addEventListener('click', () => {
     // یکی از مقدار جون کم کن
     jon.innerHTML -= 1
+    // اگه جونش 0 شد عملیات رو اجرا کن
+    if (jon.innerHTML == 0) {
+        // دیود ارور رو برا ظاهر کن
+        error.style.display = 'block'
+        // جون رو به مقدار اولی (5) برگردون
+        jon.innerHTML = 5
+    }
+})
+// اگه روی ایکون خروج دیو ارور کلیک شد عملیات رو اجرا کن
+exit.addEventListener('click', () => {
+    // دیو ارور رو مهو کن
+    error.style.display = 'none'
+})
+
+// اگه توی فضای کانتینر کلیک شد عملیات رو اجرا کن
+contaner.addEventListener('click', (e) => {
+    // مقدار عرض رو ریختم توی متغیر
+    let left = e.x
+    // مقدار ارتفاع رو ریختم توی متغیر
+    let top = e.y
+    // مقدار رو دریافت کردم و 120 تا  top از متغیر 
+    // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
+    // و گفتم به همون مقدار مارجین بالا بگیر
+    bomb.style.marginTop = top - 120 + 'px'
+    // مقدار رو دریافت کردم و 180 تا  left از متغیر 
+    // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
+    // و گفتم به همون مقدار مارجین چپ بگیر
+    bomb.style.marginLeft = left - 180 + 'px'
+    // بمب رو نمایش بده
+    bomb.style.display = 'block'
 })
