@@ -1,5 +1,10 @@
 body {
     margin: 0;
+    background: url(image/55.jpg);
+    filter: saturate(8);
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    /* backdrop-filter: contrast(90%); */
 }
 
 
@@ -21,30 +26,31 @@ body {
 
 /* دیو فضای توپ */
 #contaner {
-    width: 80%;
-    height: 450px;
-    margin: 100px auto;
-    background-color: rgb(247, 131, 131);
-    position: relative;
+    width: 99%;
+    /* width: 100%; */
+    height: 93vh;
+    /* height: 600px; */
+    /* background-color: rgb(247, 131, 131); */
+    /* position: relative;
     position: fixed;
     left: 0;
     right: 0;
     top: 0;
-    bottom: 0;
+    bottom: 0; */
+
 }
 
 /* دیو توپ */
 #ball {
-    width: 75px;
-    height: 75px;
-    background-color: aquamarine;
+    width: 200px;
+    height: 200px;
     border-radius: 50px;
-    /* margin-top: 10px; */
     transition-duration: 2s;
+    border: none;
 }
 
 #error {
-    background-color: aqua;
+    background:url(image/error.gif);
     width: 100%;
     height: 100vh;
     position: absolute;
