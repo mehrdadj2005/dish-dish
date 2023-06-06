@@ -32,7 +32,7 @@ body {
     width: 80%;
     height: 450px;
     margin: 100px auto;
-    background-color: rgb(247, 131, 131);
+    background-color: rgba(247, 131, 131, 0);
     position: relative;
     position: fixed;
     left: 0;
