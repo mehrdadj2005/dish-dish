@@ -10,28 +10,26 @@ body {
 
 /* Span Of The Lives */
 /* اسپن جون */
-<<<<<<< HEAD
-#jon {
-    background:linear-gradient(60deg,#000,rgb(119, 117, 117)) ;
-   color: #fff;
-    padding: 5px 12px 5px 12px;
-    filter:drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
-=======
+
+
+ 
 #lives {
-    border: 1px groove red;
+    background:linear-gradient(60deg,#000,rgb(119, 117, 117)) ;
+    color: #fff;
+     padding: 5px 12px 5px 12px;
+     filter:drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
     padding: 5px;
->>>>>>> 67808013006efba43e8340fbf7583c3792738136
+
     font-size: 34px;
     border-radius: 40px 40px;
     font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 28px;
 }
 
-<<<<<<< HEAD
 
-=======
+
+
 /* Speed Input */
->>>>>>> 67808013006efba43e8340fbf7583c3792738136
 /* اینپوت سرعت */
 #speed {
     background-color: rgb(40, 117, 10);
@@ -83,15 +81,14 @@ body {
     cursor: pointer;
 }
 
-<<<<<<< HEAD
-#bomb { 
-=======
+ 
+
 /* Bomb */
 #bomb {
     width: 50px;
     height: 50px;
     background-color:rgba(210, 57, 30, 0.595);
->>>>>>> 67808013006efba43e8340fbf7583c3792738136
+
     position: absolute;
     left: 0;
     top: 0;
