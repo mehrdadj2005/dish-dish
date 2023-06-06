@@ -1,13 +1,18 @@
+// Dish Dish Data Structure 
+// Developers: Mehrdad Jokari, Tara Tavangar , Aye Mozaffari
+
+
+// Selecting From HTML
 // بادی رو سلکت کردم
 let body = document.querySelector('body')
 // فضایی که توپ میتواند جابجا شود
-let contaner = document.querySelector('#contaner')
+let ballContainer = document.querySelector('#ballContainer')
 // توپ رو سلکت کردم
 let ball = document.querySelector('#ball')
 // اسپن جون رو سلکت کردم
-let jon = document.querySelector('#jon')
+let lives = document.querySelector('#lives')
 // اینپوت جون رو سلکت کردم
-let sorat = document.querySelector('#sorat')
+let speed = document.querySelector('#speed')
 // دیو ارور رو سلکت کردم
 let error = document.querySelector('#error')
 // اسپن ارور
@@ -16,8 +21,8 @@ let exit = document.querySelector('#exit')
 let bomb = document.querySelector('#bomb')
 
 
-// /\/\/\/\/\/\/\/\/\/\/\/\/\ جابجا کردن توپ /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\
-
+// Moving The Ball
+// Adding Event Listener To Use KeyDown 
 //بادی رو صدا زدم و گفتم اگه توی بادی دکمه ای از 
 // کیبورد کلیک شد برام فانکشن رو اجراکن
 body.addEventListener('keydown', (e) => {
@@ -76,7 +81,7 @@ body.addEventListener('keydown', (e) => {
 // بیا فانکشن رو اجرا کن
 sorat.addEventListener('click', () => {
     //  مقدار اینپوت سرعت ریختم توی یه متغیر که کار برام آسون بشه
-    let x = sorat.value
+    let x = speed.value
     // اگه متغیر برابر بود با 1 عملایت رو انجام بده
     if (x == 1) {
         // سرعت توپ رو خیلی زیاد کن
@@ -107,13 +112,13 @@ sorat.addEventListener('click', () => {
 // اگه رو توپ کلیک شد فانکشن رو برام اجرا کن
 ball.addEventListener('click', () => {
     // یکی از مقدار جون کم کن
-    jon.innerHTML -= 1
+    lives.innerHTML -= 1
     // اگه جونش 0 شد عملیات رو اجرا کن
-    if (jon.innerHTML == 0) {
+    if (lives.innerHTML == 0) {
         // دیود ارور رو برا ظاهر کن
         error.style.display = 'block'
         // جون رو به مقدار اولی (5) برگردون
-        jon.innerHTML = 5
+        lives.innerHTML = 5
     }
 })
 // اگه روی ایکون خروج دیو ارور کلیک شد عملیات رو اجرا کن
@@ -123,7 +128,7 @@ exit.addEventListener('click', () => {
 })
 
 // اگه توی فضای کانتینر کلیک شد عملیات رو اجرا کن
-contaner.addEventListener('click', (e) => {
+ballContainer.addEventListener('click', (e) => {
     // مقدار عرض رو ریختم توی متغیر
     let left = e.x
     // مقدار ارتفاع رو ریختم توی متغیر
