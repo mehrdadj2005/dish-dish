@@ -32,7 +32,7 @@ body.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') {
         // توپ رو صدا زدم و بهش استایل مارجین بالا رو دادم
         // و گفتم از هر جایی که هستی برو پایین
-        ball.style.marginTop = '350px'
+        ball.style.marginTop = '29%'
     }
 })
 
@@ -126,9 +126,10 @@ ball.addEventListener('click', () => {
     }
 })
 // اگه روی ایکون خروج دیو ارور کلیک شد عملیات رو اجرا کن
-exit.addEventListener('click', () => {
+error.addEventListener('click', () => {
     // دیو ارور رو مهو کن
     error.style.display = 'none'
+    bomb.style.display = 'none'
 })
 
 // اگه توی فضای کانتینر کلیک شد عملیات رو اجرا کن
@@ -140,12 +141,12 @@ ballContainer.addEventListener('click', (e) => {
     // مقدار رو دریافت کردم و 120 تا  top از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین بالا بگیر
-    bomb.style.marginTop = top - 120 + 'px'
+    bomb.style.marginTop = top - 20 + 'px'
     // مقدار رو دریافت کردم و 180 تا  left از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین چپ بگیر
-    bomb.style.marginLeft = left - 180 + 'px'
+    bomb.style.marginLeft = left - 20 + 'px'
     // بمب رو نمایش بده
-    bomb.style.display = 'block'
+    bomb.style.display = 'inline-block'
 })
 // Adding Event Listener To Use Click Ended

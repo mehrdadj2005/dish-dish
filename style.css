@@ -27,34 +27,24 @@ body {
 }
 
 /* Ball Space */
-/* دیو فضای توپ */
+/* دیو فضای کارکتر */
 #ballContainer {
-    width: 80%;
-    height: 450px;
-    margin: 100px auto;
-    background-color: rgba(247, 131, 131, 0);
-    position: relative;
-    position: fixed;
-    left: 0;
-    right: 0;
-    top: 0;
-    bottom: 0; 
+    width: 99%;
+    height: 90vh;
+    border: 2px solid red;
 
 }
 
 /* The Ball's Div */
 /* دیو توپ */
 #ball {
-    width: 200px;
-    height: 200px;
-    border-radius: 50px;
+    width: 14%;
     transition-duration: 2s;
-    border: none;
 }
 
 /* Game Over Error */
 #error {
-    background:url(image/error.gif);
+    background: url(image/error.gif);
     width: 100%;
     height: 100vh;
     position: absolute;
@@ -72,7 +62,7 @@ body {
 #bomb {
     width: 50px;
     height: 50px;
-    background-color:rgba(210, 57, 30, 0.595);
+    background-color: rgb(255, 38, 0);
     position: absolute;
     left: 0;
     top: 0;
