@@ -32,12 +32,8 @@ body.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') {
         // توپ رو صدا زدم و بهش استایل مارجین بالا رو دادم
         // و گفتم از هر جایی که هستی برو پایین
-<<<<<<< Updated upstream
         ball.style.marginTop = '29%'
-=======
-        ball.style.marginTop = '27%'
->>>>>>> Stashed changes
-    }
+        }
 })
 
 //بادی رو صدا زدم و گفتم اگه توی بادی دکمه ای از 
@@ -64,11 +60,8 @@ body.addEventListener('keydown', (e) => {
         // توپ رو صدا زدم و بهش استایل مارجین دادم 
         // و گفتم از هر جایی که هستی به سمت چپ حرکت کن
         ball.style.marginRight = '85%'
-<<<<<<< Updated upstream
-=======
         ball.style.transform = 'rotate(-360deg)'
         // ball.style.transform='scale(1.2)'
->>>>>>> Stashed changes
     }
 })
 
@@ -150,7 +143,7 @@ ballContainer.addEventListener('click', (e) => {
     // مقدار رو دریافت کردم و 120 تا  top از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین بالا بگیر
-    bomb.style.marginTop = top - 20 + 'px'
+    bomb.style.marginTop = top - 20  + 'px'
     // مقدار رو دریافت کردم و 180 تا  left از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین چپ بگیر

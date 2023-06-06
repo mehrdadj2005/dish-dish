@@ -10,37 +10,31 @@ body {
 
 /* Span Of The Lives */
 /* اسپن جون */
-<<<<<<< Updated upstream
-
-
- 
 #lives {
-    background:linear-gradient(60deg,#000,rgb(119, 117, 117)) ;
+    background: linear-gradient(60deg, #000, rgb(119, 117, 117));
     color: #fff;
-     padding: 5px 12px 5px 12px;
-     filter:drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
-=======
-#lives {
-    background:linear-gradient(60deg,#000,rgb(119, 117, 117)) ;
-   color: #fff;
     padding: 5px 12px 5px 12px;
-    filter:drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));}
+    filter: drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
+}
+
+#lives {
+    background: linear-gradient(60deg, #000, rgb(119, 117, 117));
+    color: #fff;
+    padding: 5px 12px 5px 12px;
+    filter: drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
+}
+
 #lives {
     border: 1px groove red;
     padding: 5px;
     font-size: 34px;
->>>>>>> Stashed changes
     border-radius: 40px 40px;
-    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
     font-size: 28px;
 }
 
 
-<<<<<<< Updated upstream
 
-
-=======
->>>>>>> Stashed changes
 /* Speed Input */
 /* اینپوت سرعت */
 #speed {
@@ -56,14 +50,13 @@ body {
 #ballContainer {
     width: 99%;
     height: 90vh;
-    border: 2px solid red;
 
 }
 
 /* The Ball's Div */
 /* دیو توپ */
 #ball {
-    width: 14%;
+    width: 10%;
     transition-duration: 2s;
 }
 
@@ -83,15 +76,14 @@ body {
     cursor: pointer;
 }
 
- 
+
 
 /* Bomb */
 #bomb {
     width: 50px;
     height: 50px;
-    background-color:rgba(210, 57, 30, 0.595);
     position: absolute;
     left: 0;
     top: 0;
-   
+    display: none;
 }
