@@ -10,15 +10,15 @@ body {
 /* Span Of The Lives */
 /* اسپن جون */
 #lives {
-    border: 1px solid red;
+    border: 1px groove red;
     padding: 5px;
     font-size: 34px;
 }
 
 /* Speed Input */
 /* اینپوت سرعت */
-#sorat {
-    background-color: rgb(168, 101, 231);
+#speed {
+    background-color: rgb(40, 117, 10);
     border: none;
     outline: none;
     font-size: 34px;
@@ -71,7 +71,7 @@ body {
 #bomb {
     width: 50px;
     height: 50px;
-    background-color: red;
+    background-color:rgba(210, 57, 30, 0.595);
     position: absolute;
     left: 0;
     top: 0;

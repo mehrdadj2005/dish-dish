@@ -22,7 +22,7 @@ let bomb = document.querySelector('#bomb')
 
 
 // Moving The Ball
-// Adding Event Listener To Use KeyDown 
+// Adding Event Listener To Use KeyDown Started
 //بادی رو صدا زدم و گفتم اگه توی بادی دکمه ای از 
 // کیبورد کلیک شد برام فانکشن رو اجراکن
 body.addEventListener('keydown', (e) => {
@@ -60,8 +60,6 @@ body.addEventListener('keydown', (e) => {
         // توپ رو صدا زدم و بهش استایل مارجین دادم 
         // و گفتم از هر جایی که هستی به سمت چپ حرکت کن
         ball.style.marginRight = '85%'
-        ball.style.transform = 'rotate(-360deg)   matrix(1, 2, 3)'
-        // ball.style.transform='scale(1.2)'
     }
 })
 
@@ -76,13 +74,16 @@ body.addEventListener('keydown', (e) => {
         // چون که توپ در مرحله اول سمت راست صفحه قرار داره 
         // بهش گفتم از هر جایی گه هست به سمت راست بره
         ball.style.marginRight = '20px'
-        ball.style.transform = 'rotate(0deg)'
     }
 })
 
+// Adding Event Listener To Use KeyDown Ended 
+
+// Adding Event Listener To Use Click Started
+
 // اینپوت سرعت رو صدا زدم و گفتم هر وقت که روت کلیک شد 
 // بیا فانکشن رو اجرا کن
-sorat.addEventListener('click', () => {
+speed.addEventListener('click', () => {
     //  مقدار اینپوت سرعت ریختم توی یه متغیر که کار برام آسون بشه
     let x = speed.value
     // اگه متغیر برابر بود با 1 عملایت رو انجام بده
@@ -121,15 +122,13 @@ ball.addEventListener('click', () => {
         // دیود ارور رو برا ظاهر کن
         error.style.display = 'block'
         // جون رو به مقدار اولی (5) برگردون
-        jon.innerHTML = 5
+        lives.innerHTML = 5
     }
 })
 // اگه روی ایکون خروج دیو ارور کلیک شد عملیات رو اجرا کن
-error.addEventListener('click', () => {
+exit.addEventListener('click', () => {
     // دیو ارور رو مهو کن
     error.style.display = 'none'
-    // ------------------------------------------------------------------
-    bomb.style.display = 'none'
 })
 
 // اگه توی فضای کانتینر کلیک شد عملیات رو اجرا کن
@@ -138,14 +137,15 @@ ballContainer.addEventListener('click', (e) => {
     let left = e.x
     // مقدار ارتفاع رو ریختم توی متغیر
     let top = e.y
-    // مقدار رو دریافت کردم و 20 تا  top از متغیر 
+    // مقدار رو دریافت کردم و 120 تا  top از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین بالا بگیر
-    bomb.style.marginTop = top -20 + 'px'
-    // مقدار رو دریافت کردم و 20 تا  left از متغیر 
+    bomb.style.marginTop = top - 120 + 'px'
+    // مقدار رو دریافت کردم و 180 تا  left از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین چپ بگیر
-    bomb.style.marginLeft = left -20 + 'px'
+    bomb.style.marginLeft = left - 180 + 'px'
     // بمب رو نمایش بده
     bomb.style.display = 'block'
 })
+// Adding Event Listener To Use Click Ended
