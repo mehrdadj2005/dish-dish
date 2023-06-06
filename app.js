@@ -32,7 +32,11 @@ body.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowDown') {
         // توپ رو صدا زدم و بهش استایل مارجین بالا رو دادم
         // و گفتم از هر جایی که هستی برو پایین
+<<<<<<< Updated upstream
         ball.style.marginTop = '29%'
+=======
+        ball.style.marginTop = '27%'
+>>>>>>> Stashed changes
     }
 })
 
@@ -60,6 +64,11 @@ body.addEventListener('keydown', (e) => {
         // توپ رو صدا زدم و بهش استایل مارجین دادم 
         // و گفتم از هر جایی که هستی به سمت چپ حرکت کن
         ball.style.marginRight = '85%'
+<<<<<<< Updated upstream
+=======
+        ball.style.transform = 'rotate(-360deg)'
+        // ball.style.transform='scale(1.2)'
+>>>>>>> Stashed changes
     }
 })
 
