@@ -1,56 +1,35 @@
+*{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    
+}
+
+li {
+    list-style-type: none;
+}
 body {
     margin: 0;
-    background: url(image/8088665.gif);
-    /* background: url(image/55.jpg); */
+    background: url(image/8088665.gif); 
     filter: saturate(8);
     background-attachment: fixed;
     background-size: 100% 100%;
-    /* backdrop-filter: contrast(90%); */
+    backdrop-filter: contrast(90%);
+}
+i {
+    font-size: 28px;
+    
 }
 
 /* Span Of The Lives */
 /* اسپن جون */
-#lives {
-    background: linear-gradient(60deg, #000, rgb(119, 117, 117));
-    color: #fff;
-    padding: 5px 12px 5px 12px;
-    filter: drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
-}
-
-#lives {
-    background: linear-gradient(60deg, #000, rgb(119, 117, 117));
-    color: #fff;
-    padding: 5px 12px 5px 12px;
-    filter: drop-shadow(3px 3px 3px rgba(223, 217, 217, 0.569));
-}
-
-#lives {
-    border: 1px groove red;
-    padding: 5px;
-    font-size: 34px;
-    border-radius: 40px 40px;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 28px;
-}
 
 
-
-/* Speed Input */
-/* اینپوت سرعت */
-#speed {
-    background-color: rgb(40, 117, 10);
-    border: none;
-    outline: none;
-    font-size: 34px;
-    padding: 5px;
-}
-
-/* Ball Space */
 /* دیو فضای کارکتر */
 #ballContainer {
     width: 99%;
     height: 90vh;
-
+    
+   
 }
 
 /* The Ball's Div */
@@ -58,6 +37,8 @@ body {
 #ball {
     width: 10%;
     transition-duration: 2s;
+    -webkit-user-select: none;
+    user-select: none;
 }
 
 /* Game Over Error */
@@ -76,8 +57,6 @@ body {
     cursor: pointer;
 }
 
-
-
 /* Bomb */
 #bomb {
     width: 50px;
@@ -86,4 +65,61 @@ body {
     left: 0;
     top: 0;
     display: none;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+    position: relative;
+    padding: 20px 0;
+    flex-direction: row-reverse;
+
+}
+
+.headercontainers {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+   
+}
+
+.headercontainers div {
+   align-items: center;
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+.headercontainers div  span {
+    font-size: 24px;
+    margin-right: 3px;
+}
+
+#lives {
+    font-size: 20.8px;
+    color: aliceblue;
+}
+#scoreBoardContainer{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#scoreBoard {
+    height: 550px;
+    width: 90%;
+    max-width: 700px;
+    padding: 50px 30px 20px;
+    background: hsla(0, 0%, 100%, 0.628);
+    border-radius: 4px;
+    box-shadow: 0 4px 30px rgba(129, 174, 155, 0.5);
+    position: relative;
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: flex-end;
+    /* justify-content: space-around; */
+    flex-direction:column;
 }

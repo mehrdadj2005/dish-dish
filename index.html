@@ -7,22 +7,49 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DISH-DISH</title>
     <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome -->
+    <script src="https://kit.fontawesome.com/7006acfc2a.js" crossorigin="anonymous"></script>
 </head>
 
 
 <body>
 
     <!-- Eng Comments By Tara Tavangar -->
-    <!-- Span That Shows The Num Of Lives  -->
-    <!-- اسپنی که قرار است جون توپ را نمایش دهد -->
+    <header>
+        
 
-    <span id="lives">5</span>
+            <div class="headercontainers">
+                <!-- home icon -->
+                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+            </div>
 
-    <!-- Input That Controls The Speed -->
-    <!-- اینپوتی که قرار است سرعت توپ را کنترل کند -->
+            <!-- player heart -->
+            <div class="headercontainers">
+                <h3>Player </h3>
+                <div>
+                    <span id="lives">5 </span>
+                <i class="fa-solid fa-heart"></i>
+                </div>
+            </div>
 
-    <input type="number" min="1" max="5" value="3" id="speed">
-    
+
+            <!-- time -->
+             <div class="headercontainers" >
+                <h3>2:300</h3>
+             </div>
+
+             <!-- player bomb -->
+             <div class="headercontainers" >
+                <h3>Player </h3>
+                <div>
+                    <span id="lives">5 </span>
+                <i class="fa-solid fa-bomb"></i>
+                </div>
+                
+            </div>
+    </header>
+    <!-- <input type="number" min="1" max="5" value="3" id="speed"> -->
+
     <!-- SPACE FOR THE BALL -->
     <!-- فاضایی که توپ در ان میتواند جابجا شود -->
 
@@ -32,9 +59,44 @@
         <!-- توپ -->
         <!-- <div ></div> -->
         <img id="ball" src="pngtree-voodoo-doll-face-mascot-logo-design-png-image_5999276_thumbnail.png" alt="">
-        <div ><img id="bomb" src="image/icons8-bomb-94.png" width="98px" height="98px" alt="" srcset=""></div>
+        <div><img id="bomb" src="image/icons8-bomb-94.png" width="98px" height="98px" alt="" srcset=""></div>
     </div>
     <div id="error"></div>
+
+   <div id="scoreBoardContainer">
+    <div id="scoreBoard">
+        <ul>
+            <li>
+                1.
+
+            </li>
+            <li>
+                2.
+
+            </li>
+            <li>
+                3.
+
+            </li>
+        </ul>
+
+    </div>
+   </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     <script src="app.js"></script>
 </body>
 

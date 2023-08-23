@@ -11,14 +11,13 @@ let ballContainer = document.querySelector('#ballContainer')
 let ball = document.querySelector('#ball')
 // اسپن جون رو سلکت کردم
 let lives = document.querySelector('#lives')
-// اینپوت جون رو سلکت کردم
-let speed = document.querySelector('#speed')
 // دیو ارور رو سلکت کردم
 let error = document.querySelector('#error')
 // اسپن ارور
 let exit = document.querySelector('#exit')
 // بمب انجار در صفحه
 let bomb = document.querySelector('#bomb')
+let head = document.querySelector('header')
 
 
 // Moving The Ball
@@ -85,48 +84,20 @@ body.addEventListener('keydown', (e) => {
 
 // اینپوت سرعت رو صدا زدم و گفتم هر وقت که روت کلیک شد 
 // بیا فانکشن رو اجرا کن
-speed.addEventListener('click', () => {
-    //  مقدار اینپوت سرعت ریختم توی یه متغیر که کار برام آسون بشه
-    let x = speed.value
-    // اگه متغیر برابر بود با 1 عملایت رو انجام بده
-    if (x == 1) {
-        // سرعت توپ رو خیلی زیاد کن
-        ball.style.transitionDuration = '10s'
-    }
-    // اگه متغیر برابر بود با 2 عملایت رو انجام بده
-    if (x == 2) {
-        // سرعت توپ رو زیاد کن
-        ball.style.transitionDuration = '7s'
-    }
-    // اگه متغیر برابر بود با 3 عملایت رو انجام بده
-    if (x == 3) {
-        // سرعت توپ رو به حد نرمال بیار 
-        ball.style.transitionDuration = '5s'
-    }
-    // اگه متغیر برابر بود با 4 عملایت رو انجام بده
-    if (x == 4) {
-        // سرعت توپ رو کم کن
-        ball.style.transitionDuration = '3s'
-    }
-    // اگه متغیر برابر بود با 5 عملایت رو انجام بده
-    if (x == 5) {
-        // سرعت توپ رو خیلی کم کن
-        ball.style.transitionDuration = '1s'
-    }
-})
 
-// اگه رو توپ کلیک شد فانکشن رو برام اجرا کن
-ball.addEventListener('click', () => {
-    // یکی از مقدار جون کم کن
-    lives.innerHTML -= 1
-    // اگه جونش 0 شد عملیات رو اجرا کن
-    if (lives.innerHTML == 0) {
-        // دیود ارور رو برا ظاهر کن
-        error.style.display = 'block'
-        // جون رو به مقدار اولی (5) برگردون
-        lives.innerHTML = 5
-    }
-})
+
+// // اگه رو توپ کلیک شد فانکشن رو برام اجرا کن
+// ball.addEventListener('click', () => {
+//     // یکی از مقدار جون کم کن
+//     lives.innerHTML -= 1
+//     // اگه جونش 0 شد عملیات رو اجرا کن
+//     if (lives.innerHTML == 0) {
+//         // دیود ارور رو برا ظاهر کن
+//         error.style.display = 'block'
+//         // جون رو به مقدار اولی (5) برگردون
+//         lives.innerHTML = 5
+//     }
+// })
 // اگه روی ایکون خروج دیو ارور کلیک شد عملیات رو اجرا کن
 error.addEventListener('click', () => {
     // دیو ارور رو مهو کن
@@ -152,3 +123,10 @@ ballContainer.addEventListener('click', (e) => {
     bomb.style.display = 'inline-block'
 })
 // Adding Event Listener To Use Click Ended
+
+
+body.addEventListener('load', loadBody())
+function loadBody() {
+    ballContainer.style = 'display:none;'
+    head.style= 'display:none;'
+}
