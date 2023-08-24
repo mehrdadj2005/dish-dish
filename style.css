@@ -1,23 +1,25 @@
-*{
+* {
     font-family: 'Poppins', sans-serif;
     color: white;
-    
+
 }
 
 li {
     list-style-type: none;
 }
+
 body {
     margin: 0;
-    background: url(image/8088665.gif); 
+    background: url(image/8088665.gif);
     filter: saturate(8);
     background-attachment: fixed;
     background-size: 100% 100%;
     backdrop-filter: contrast(90%);
 }
+
 i {
     font-size: 28px;
-    
+
 }
 
 /* Span Of The Lives */
@@ -28,8 +30,8 @@ i {
 #ballContainer {
     width: 99%;
     height: 90vh;
-    
-   
+
+
 }
 
 /* The Ball's Div */
@@ -67,7 +69,7 @@ i {
     display: none;
 }
 
-header{
+header {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -82,17 +84,17 @@ header{
     display: flex;
     justify-content: space-between;
     margin: 10px;
-   
+
 }
 
 .headercontainers div {
-   align-items: center;
+    align-items: center;
     display: flex;
     justify-content: space-between;
     margin: 10px;
 }
 
-.headercontainers div  span {
+.headercontainers div span {
     font-size: 24px;
     margin-right: 3px;
 }
@@ -101,18 +103,18 @@ header{
     font-size: 20.8px;
     color: aliceblue;
 }
-#scoreBoardContainer{
-    width: 100%;
-    height: 100vh;
+
+/* #scoreBoardContainer {
+    height: 50vh;
+    width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
+
 #scoreBoard {
-    height: 550px;
-    width: 90%;
-    max-width: 700px;
-    padding: 50px 30px 20px;
+    height: 50vh;
+    width: 50%;
     background: hsla(0, 0%, 100%, 0.628);
     border-radius: 4px;
     box-shadow: 0 4px 30px rgba(129, 174, 155, 0.5);
@@ -120,6 +122,129 @@ header{
     backdrop-filter: blur(8px);
     display: flex;
     align-items: flex-end;
-    /* justify-content: space-around; */
-    flex-direction:column;
+    flex-direction: column;
+
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+/* modal start main*/
+#modalStartMain {
+    width: 50%;
+    height: 50vh;
+    background-color: rgba(194, 194, 194, 0.502);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid lightblue;
+    border-radius: 20px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#modalStart h1 {
+    font-size: 60px;
+    color: lightBlue;
+}
+
+#btnStartMain {
+    margin: 10px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    border: 3px solid lightblue;
+    font-size: 24px;
+    font-weight: bold;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+
+#btnScores {
+    margin: 10px;
+    padding: 20px 26px;
+    border-radius: 10px;
+    border: 3px solid lightblue;
+    font-size: 24px;
+    font-weight: bold;
+    transition-duration: 1s;
+    cursor: pointer;
+}
+
+#btnStartMain:hover,
+#btnScores:hover {
+    border-radius: 80% 10px;
+}
+
+/* modal click to start main  */
+
+#modalClickStart {
+    width: 50%;
+    height: 50vh;
+    /* margin: 10% auto 0; */
+    background-color: rgba(229, 219, 219, 0.502);
+
+    /* دیسپلی با جاوااسکریپت فلکس می شود */
+    display: none;
+    flex-direction: column;
+    align-items: center;
+
+    border: 3px solid lightblue;
+    border-radius: 20px;
+
+    position: relative;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, 50%);
+}
+
+#backToModalStartMain {
+    position: absolute;
+    top: 1%;
+    left: 1%;
+    cursor: pointer;
+}
+
+#modalClickStart h5 {
+    margin: 0;
+}
+
+#modalClickStart>div:nth-of-type(1) {
+    display: flex;
+    width: 80%;
+    justify-content: space-around;
+    flex-direction: row-reverse;
+}
+
+#modalClickStart>div>div {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+#modalClickStart>div h5:nth-of-type(1) {
+    margin-right: 75%;
+    margin-top: 20%;
+}
+
+#modalClickStart>div h5:nth-of-type(2) {
+    margin-right: 55%;
+    margin-top: 20%;
+}
+
+#modalClickStart input {
+    text-align: left;
+}
+
+#btnPlayGame {
+    margin-top: 10%;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
 }

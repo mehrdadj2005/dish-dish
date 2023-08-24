@@ -16,38 +16,72 @@
 
     <!-- Eng Comments By Tara Tavangar -->
     <header>
-        
 
-            <div class="headercontainers">
-                <!-- home icon -->
-                <i class="fa-solid fa-house" style="color: #ffffff;"></i>
-            </div>
 
-            <!-- player heart -->
-            <div class="headercontainers">
-                <h3>Player </h3>
-                <div>
-                    <span id="lives">5 </span>
+        <div class="headercontainers">
+            <!-- home icon -->
+            <i class="fa-solid fa-house" style="color: #ffffff;"></i>
+        </div>
+
+        <!-- player heart -->
+        <div class="headercontainers">
+            <div>
+                <span id="lives">5 </span>
                 <i class="fa-solid fa-heart"></i>
-                </div>
             </div>
+            <h3>Player </h3>
+        </div>
 
 
-            <!-- time -->
-             <div class="headercontainers" >
-                <h3>2:300</h3>
-             </div>
+        <div>
+            <img id="bomb" src="image/icons8-bomb-94.png" width="98px" height="98px" alt="" srcset=""></div>
+        </div>
 
-             <!-- player bomb -->
-             <div class="headercontainers" >
-                <h3>Player </h3>
-                <div>
-                    <span id="lives">5 </span>
+        <!-- time -->
+        <div class="headercontainers">
+            <h3>2:300</h3>
+        </div>
+
+        <!-- player bomb -->
+        <div class="headercontainers">
+            <div>
+                <span id="lives">5 </span>
                 <i class="fa-solid fa-bomb"></i>
-                </div>
-                
             </div>
+            <h3>Player </h3>
+
+        </div>
     </header>
+
+    <!-- modal start game -->
+    <div id="modalStartMain">
+        <h1>DISH-DISH</h1>
+        <button id="btnStartMain">START</button>
+        <button id="btnScores">SCORE'S</button>
+    </div>
+
+    <!-- modal click to start main -->
+    <!-- مودالی که وقتی دکمه استارت کلیک مشه باید ظاهر بشه -->
+    <div id="modalClickStart">
+        <img src="image/icons8-back-50.png" alt="" id="backToModalStartMain">
+        <div>
+            <div>
+                <h3>💙 RUNAWAY</h3>
+                <h5>NAME</h5>
+                <input type="text" id="namePlayerRunaway">
+                <h5>PASSWORD</h5>
+                <input type="password" id="passwordPlayerRunaway">
+            </div>
+            <div>
+                <h3>💣 DEADLY</h3>
+                <h5>NAME</h5>
+                <input type="text" id="namePlayerDeadly">
+                <h5>PASSWORD</h5>
+                <input type="password" id="passwordPlayerDeadly">
+            </div>
+        </div>
+        <button id="btnPlayGame">PLAY GAME</button>
+    </div>
     <!-- <input type="number" min="1" max="5" value="3" id="speed"> -->
 
     <!-- SPACE FOR THE BALL -->
@@ -61,42 +95,13 @@
         <img id="ball" src="pngtree-voodoo-doll-face-mascot-logo-design-png-image_5999276_thumbnail.png" alt="">
         <div><img id="bomb" src="image/icons8-bomb-94.png" width="98px" height="98px" alt="" srcset=""></div>
     </div>
-    <div id="error"></div>
 
-   <div id="scoreBoardContainer">
     <div id="scoreBoard">
-        <ul>
-            <li>
-                1.
 
-            </li>
-            <li>
-                2.
-
-            </li>
-            <li>
-                3.
-
-            </li>
-        </ul>
 
     </div>
-   </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <div id="error"></div>
     <script src="app.js"></script>
 </body>
 

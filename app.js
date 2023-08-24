@@ -19,6 +19,80 @@ let exit = document.querySelector('#exit')
 let bomb = document.querySelector('#bomb')
 let head = document.querySelector('header')
 
+// دکمه استارت صفحه اصلی
+let btnStart = document.querySelector('#btnStartMain')
+//مودال صفحه اصلی
+let modalStartMain = document.querySelector('#modalStartMain')
+// مودال صفحه شروع بازی (اسم نویسی کاربران)
+let modalClickStart = document.querySelector('#modalClickStart')
+// دکمه برگشت (از مودال شروع بازی به مودال اصلی)
+let backToModalStartMain = document.querySelector('#backToModalStartMain')
+// دکمه شروع بازی 
+let btnPlayGame = document.querySelector('#btnPlayGame')
+// اسم کاربری که فرار میکند
+let namePlayerRunaway = document.querySelector('#namePlayerRunaway')
+// پسوورد کاربری که فرار میکند
+let passwordPlayerRunaway = document.querySelector('#passwordPlayerRunaway')
+// اسم کاربری که بمب میگذارد
+let namePlayerDeadly = document.querySelector('#namePlayerDeadly')
+// پسوورد کاربری که بمب میگذارد
+let passwordPlayerDeadly = document.querySelector('#passwordPlayerDeadly')
+
+let scoreBoard = document.querySelector('#scoreBoard')
+
+let btnScores = document.querySelector('#btnScores')
+
+
+// در زمان لود صفحه تمام محتویات صفحه
+// مخفی بشوند و فقط مودال ورود به بازی ظاهر شود
+body.addEventListener('load', loadBody())
+function loadBody() {
+    ballContainer.style = 'display:none;'
+    scoreBoard.style = 'display:none;'
+    head.style = 'display:none;'
+}
+
+// اگه روی دکمه استارت مودال صفحه اصلی کلیک شد
+//  مودال صفحه اصلی مخفی بشود
+// مودال شروع بازی (اسم نویسی اربران) ظاهر شود
+btnStart.addEventListener('click', () => {
+    modalStartMain.style = 'display:none;'
+    modalClickStart.style = 'display:flex;'
+})
+
+// با کلیک بر روی دکمه بک در مودال شروع بازی (اسم نویسی کاربران)
+// مودال فعلی مخفی بشود
+// مودال صفحه اصلی ظاهر بشود
+backToModalStartMain.addEventListener('click', () => {
+    modalClickStart.style = 'display:none;'
+    modalStartMain.style = 'display:flex;'
+})
+
+btnScores
+
+btnScores.addEventListener('click', () => {
+    modalStartMain.style = 'display:none;'
+    scoreBoard.style = 'display:flex;'
+})
+
+btnPlayGame.addEventListener('click', playGame)
+function playGame() {
+    let name1 = namePlayerRunaway.value
+    let password1 = passwordPlayerRunaway.value
+    let name2 = namePlayerDeadly.value
+    let password2 = passwordPlayerDeadly.value
+
+    chekInLS()
+}
+
+
+function chekInLS() {
+    let ls = localStorage.getItem('profile')
+    if (ls == null) {
+        localStorage.setItem('profile', '[]')
+    }
+    console.log(localStorage.getItem('profile'))
+}
 
 // Moving The Ball
 // Adding Event Listener To Use KeyDown Started
@@ -32,7 +106,7 @@ body.addEventListener('keydown', (e) => {
         // توپ رو صدا زدم و بهش استایل مارجین بالا رو دادم
         // و گفتم از هر جایی که هستی برو پایین
         ball.style.marginTop = '29%'
-        }
+    }
 })
 
 //بادی رو صدا زدم و گفتم اگه توی بادی دکمه ای از 
@@ -114,7 +188,7 @@ ballContainer.addEventListener('click', (e) => {
     // مقدار رو دریافت کردم و 120 تا  top از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین بالا بگیر
-    bomb.style.marginTop = top - 20  + 'px'
+    bomb.style.marginTop = top - 20 + 'px'
     // مقدار رو دریافت کردم و 180 تا  left از متغیر 
     // ازش کم کردم تا بیاد هموون جایی که موس قرار داره
     // و گفتم به همون مقدار مارجین چپ بگیر
@@ -123,10 +197,3 @@ ballContainer.addEventListener('click', (e) => {
     bomb.style.display = 'inline-block'
 })
 // Adding Event Listener To Use Click Ended
-
-
-body.addEventListener('load', loadBody())
-function loadBody() {
-    ballContainer.style = 'display:none;'
-    head.style= 'display:none;'
-}
