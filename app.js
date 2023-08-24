@@ -200,7 +200,7 @@ function startGame() {
     head.style = 'display:flex;'
 }
 // Countdown Timer
-let timeoutHandle;
+
 function countdown(minutes) {
     let seconds = 60;
     let mins = minutes
