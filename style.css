@@ -69,6 +69,7 @@ i {
     display: none;
 }
 
+/* Main Header */
 header {
     display: flex;
     align-items: center;
@@ -77,7 +78,6 @@ header {
     position: relative;
     padding: 20px 0;
     flex-direction: row-reverse;
-
 }
 
 .headercontainers {
@@ -104,13 +104,6 @@ header {
     color: aliceblue;
 }
 
-/* #scoreBoardContainer {
-    height: 50vh;
-    width: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} */
 
 #scoreBoard {
     height: 50vh;

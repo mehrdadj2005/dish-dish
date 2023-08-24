@@ -18,6 +18,7 @@ let exit = document.querySelector('#exit')
 // بمب انجار در صفحه
 let bomb = document.querySelector('#bomb')
 let head = document.querySelector('header')
+let playGame = document.querySelector('#btnPlayGame')
 
 // دکمه استارت صفحه اصلی
 let btnStart = document.querySelector('#btnStartMain')
@@ -75,15 +76,9 @@ btnScores.addEventListener('click', () => {
     scoreBoard.style = 'display:flex;'
 })
 
-btnPlayGame.addEventListener('click', playGame)
-function playGame() {
-    let name1 = namePlayerRunaway.value
-    let password1 = passwordPlayerRunaway.value
-    let name2 = namePlayerDeadly.value
-    let password2 = passwordPlayerDeadly.value
 
-    chekInLS()
-}
+   
+
 
 
 function chekInLS() {
@@ -93,6 +88,7 @@ function chekInLS() {
     }
     console.log(localStorage.getItem('profile'))
 }
+chekInLS()
 
 // Moving The Ball
 // Adding Event Listener To Use KeyDown Started
@@ -196,4 +192,40 @@ ballContainer.addEventListener('click', (e) => {
     // بمب رو نمایش بده
     bomb.style.display = 'inline-block'
 })
+btnPlayGame.addEventListener('click' , startGame)
 // Adding Event Listener To Use Click Ended
+function startGame() {
+    modalClickStart.style = 'display:none;'
+    ballContainer.style = 'display:block;'
+    head.style = 'display:flex;'
+}
+// Countdown Timer
+let timeoutHandle;
+function countdown(minutes) {
+    let seconds = 60;
+    let mins = minutes
+    let counter = document.getElementById("timer");
+    let currentMinutes = mins-1
+    // we create an interval variable to clear it later
+    // we also use an arrow function to have access to variable
+    // outside of the current function's scope.
+    let interval = setInterval(() => {
+      seconds--;
+      counter.innerHTML =
+      currentMinutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+      // our seconds have run out
+      if(seconds <= 0) {
+        // our minutes have run out
+        if(currentMinutes <= 0) {
+          // we display the finished message and clear the interval so it stops.
+          counter.innerHTML = "Finished"
+          clearInterval(interval);
+        } else {
+          // otherwise, we decrement the number of minutes and change the seconds back to 60.
+          currentMinutes--;
+          seconds = 60;
+        }
+      }
+    // we set our interval to a second.
+    }, 1000);
+}
