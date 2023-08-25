@@ -1,5 +1,10 @@
+
+
+  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+
 * {
-    font-family: 'Poppins', sans-serif;
+   
     color: white;
 
 }
@@ -15,6 +20,7 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
     backdrop-filter: contrast(90%);
+    font-family: 'Lobster', cursive;
 }
 
 i {
@@ -99,7 +105,7 @@ header {
     margin-right: 3px;
 }
 .headercontainers button{
-    color: rgb(17, 255, 0);
+    color: rgba(255, 255, 255, 0);
     background-color: hsla(0, 0%, 100%, 0.628);
 
 }
@@ -154,10 +160,12 @@ span#lives {
 }
 
 #btnStartMain {
+    color: black;
+    background:linear-gradient(60deg,#456,#788);
     margin: 10px;
     padding: 20px 40px;
     border-radius: 10px;
-    border: 3px solid lightblue;
+    border: none;
     font-size: 24px;
     font-weight: bold;
     transition-duration: 1s;
@@ -169,16 +177,20 @@ span#lives {
     margin: 10px;
     padding: 20px 26px;
     border-radius: 10px;
-    border: 3px solid lightblue;
+    border: none;
     font-size: 24px;
     font-weight: bold;
     transition-duration: 1s;
     cursor: pointer;
+    color: black;
+    background:linear-gradient(60deg,#456,#788);
 }
 
 #btnStartMain:hover,
 #btnScores:hover {
     border-radius: 80% 10px;
+    background:linear-gradient(-60deg,rgb(168, 190, 212),#788);
+    transition: 2s;
 }
 
 /* modal click to start main  */
