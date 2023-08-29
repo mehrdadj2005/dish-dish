@@ -77,7 +77,7 @@ btnScores.addEventListener('click', () => {
 })
 
 
-   
+
 
 
 
@@ -156,18 +156,18 @@ body.addEventListener('keydown', (e) => {
 // بیا فانکشن رو اجرا کن
 
 
-// // اگه رو توپ کلیک شد فانکشن رو برام اجرا کن
-// ball.addEventListener('click', () => {
-//     // یکی از مقدار جون کم کن
-//     lives.innerHTML -= 1
-//     // اگه جونش 0 شد عملیات رو اجرا کن
-//     if (lives.innerHTML == 0) {
-//         // دیود ارور رو برا ظاهر کن
-//         error.style.display = 'block'
-//         // جون رو به مقدار اولی (5) برگردون
-//         lives.innerHTML = 5
-//     }
-// })
+// اگه رو توپ کلیک شد فانکشن رو برام اجرا کن
+ball.addEventListener('click', () => {
+    // یکی از مقدار جون کم کن
+    lives.innerHTML -= 1
+    // اگه جونش 0 شد عملیات رو اجرا کن
+    if (lives.innerHTML == 0) {
+        // دیود ارور رو برا ظاهر کن
+        error.style.display = 'block'
+        // جون رو به مقدار اولی (5) برگردون
+        lives.innerHTML = 5
+    }
+})
 // اگه روی ایکون خروج دیو ارور کلیک شد عملیات رو اجرا کن
 error.addEventListener('click', () => {
     // دیو ارور رو مهو کن
@@ -192,7 +192,7 @@ ballContainer.addEventListener('click', (e) => {
     // بمب رو نمایش بده
     bomb.style.display = 'inline-block'
 })
-btnPlayGame.addEventListener('click' , startGame)
+btnPlayGame.addEventListener('click', startGame)
 // Adding Event Listener To Use Click Ended
 function startGame() {
     modalClickStart.style = 'display:none;'
@@ -205,27 +205,27 @@ function countdown(minutes) {
     let seconds = 60;
     let mins = minutes
     let counter = document.getElementById("timer");
-    let currentMinutes = mins-1
+    let currentMinutes = mins - 1
     // we create an interval variable to clear it later
     // we also use an arrow function to have access to variable
     // outside of the current function's scope.
     let interval = setInterval(() => {
-      seconds--;
-      counter.innerHTML =
-      currentMinutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
-      // our seconds have run out
-      if(seconds <= 0) {
-        // our minutes have run out
-        if(currentMinutes <= 0) {
-          // we display the finished message and clear the interval so it stops.
-          counter.innerHTML = "Finished"
-          clearInterval(interval);
-        } else {
-          // otherwise, we decrement the number of minutes and change the seconds back to 60.
-          currentMinutes--;
-          seconds = 60;
+        seconds--;
+        counter.innerHTML =
+            currentMinutes.toString() + ":" + (seconds < 10 ? "0" : "") + String(seconds);
+        // our seconds have run out
+        if (seconds <= 0) {
+            // our minutes have run out
+            if (currentMinutes <= 0) {
+                // we display the finished message and clear the interval so it stops.
+                counter.innerHTML = "Finished"
+                clearInterval(interval);
+            } else {
+                // otherwise, we decrement the number of minutes and change the seconds back to 60.
+                currentMinutes--;
+                seconds = 60;
+            }
         }
-      }
-    // we set our interval to a second.
+        // we set our interval to a second.
     }, 1000);
 }

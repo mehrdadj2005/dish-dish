@@ -1,12 +1,11 @@
-
-
-  @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-
-
 * {
-   
-    color: white;
+    font-family: 'Poppins', sans-serif;
 
+
+}
+
+header * {
+    color: white;
 }
 
 li {
@@ -20,7 +19,6 @@ body {
     background-attachment: fixed;
     background-size: 100% 100%;
     backdrop-filter: contrast(90%);
-    font-family: 'Lobster', cursive;
 }
 
 i {
@@ -35,16 +33,18 @@ i {
 /* دیو فضای کارکتر */
 #ballContainer {
     width: 99%;
-    height: 90vh;
+    height: 89.8vh;
 
 
 }
+
+
 
 /* The Ball's Div */
 /* دیو توپ */
 #ball {
     width: 10%;
-    transition-duration: 2s;
+    transition-duration: 4s;
     -webkit-user-select: none;
     user-select: none;
 }
@@ -59,6 +59,7 @@ i {
     display: none;
     text-align: center;
     font-size: 100px;
+    z-index: 1;
 }
 
 #error span {
@@ -73,6 +74,7 @@ i {
     left: 0;
     top: 0;
     display: none;
+    z-index: 1;
 }
 
 /* Main Header */
@@ -80,9 +82,8 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    justify-content: space-around;
+    justify-content: space-between;
     position: relative;
-    padding: 20px 0;
     flex-direction: row-reverse;
 }
 
@@ -104,20 +105,13 @@ header {
     font-size: 24px;
     margin-right: 3px;
 }
-.headercontainers button{
-    color: rgba(255, 255, 255, 0);
-    background-color: hsla(0, 0%, 100%, 0.628);
-
-}
 
 #lives {
     font-size: 20.8px;
     color: aliceblue;
 }
 
-span#lives {
-    margin: 4px;
-}
+
 #scoreBoard {
     height: 50vh;
     width: 50%;
@@ -140,6 +134,7 @@ span#lives {
 #modalStartMain {
     width: 50%;
     height: 50vh;
+    background-color: rgba(194, 194, 194, 0.502);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -149,9 +144,6 @@ span#lives {
     left: 50%;
     top: 50%;
     transform: translate(-50%, 50%);
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(129, 174, 155, 0.5);
-    backdrop-filter: blur(8px);
 }
 
 #modalStart h1 {
@@ -160,12 +152,10 @@ span#lives {
 }
 
 #btnStartMain {
-    color: black;
-    background:linear-gradient(60deg,#456,#788);
     margin: 10px;
     padding: 20px 40px;
     border-radius: 10px;
-    border: none;
+    border: 3px solid lightblue;
     font-size: 24px;
     font-weight: bold;
     transition-duration: 1s;
@@ -177,20 +167,16 @@ span#lives {
     margin: 10px;
     padding: 20px 26px;
     border-radius: 10px;
-    border: none;
+    border: 3px solid lightblue;
     font-size: 24px;
     font-weight: bold;
     transition-duration: 1s;
     cursor: pointer;
-    color: black;
-    background:linear-gradient(60deg,#456,#788);
 }
 
 #btnStartMain:hover,
 #btnScores:hover {
     border-radius: 80% 10px;
-    background:linear-gradient(-60deg,rgb(168, 190, 212),#788);
-    transition: 2s;
 }
 
 /* modal click to start main  */
@@ -199,6 +185,8 @@ span#lives {
     width: 50%;
     height: 50vh;
     /* margin: 10% auto 0; */
+    background-color: rgba(229, 219, 219, 0.502);
+
     /* دیسپلی با جاوااسکریپت فلکس می شود */
     display: none;
     flex-direction: column;
@@ -212,9 +200,6 @@ span#lives {
     left: 50%;
     top: 50%;
     transform: translate(-50%, 50%);
-    border-radius: 4px;
-    box-shadow: 0 4px 30px rgba(129, 174, 155, 0.5);
-    backdrop-filter: blur(8px);
 }
 
 #backToModalStartMain {
